@@ -8,7 +8,7 @@
 
 // Your code:
 export const parametrize = (input) => {
-
+  return input.toLowerCase().split(" ").join("-");
 };
 
 // 2 =================================
@@ -19,7 +19,8 @@ export const parametrize = (input) => {
 
 // Your code:
 export const giveSentenceForPerson = (obj) => {
-
+  const { name, age, location, position } = obj;
+  return `Hello ${name} from ${location}! It is nice to meet you! You look awesome for your ${age}, young ${position}!`;
 };
 
 // 3 =================================
@@ -29,5 +30,5 @@ export const giveSentenceForPerson = (obj) => {
 
 // Your code:
 export const replace = (input) => {
-
+  return input.replace(/[aeio]/g, "*");
 };

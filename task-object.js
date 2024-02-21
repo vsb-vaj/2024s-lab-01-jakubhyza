@@ -10,9 +10,10 @@
 
 // Your code:
 export const volumeOfBox = (obj) => {
-
+  const { width, length, height } = obj;
+  return width * length * height;
 };
-  
+
 // 2 ----
 // Create a function that takes strings - firstname, lastname, age, and return object with firstname, lastname, age, yearOfBirth
 // Examples
@@ -20,8 +21,12 @@ export const volumeOfBox = (obj) => {
 
 // Your code:
 export const personObject = (firstname, lastname, age) => {
-
-
+  return {
+    firstname,
+    lastname,
+    age,
+    yearOfBirth: new Date().getFullYear() - age,
+  };
 };
 
 // 3 ----
@@ -35,7 +40,7 @@ export const personObject = (firstname, lastname, age) => {
 
 //Your code:
 export const getBudgets = (persons) => {
-
+  return persons.reduce((acc, person) => acc + person.budget, 0);
 };
 
 // 4 ----
@@ -46,6 +51,5 @@ export const getBudgets = (persons) => {
 
 // Your code:
 export const sortVehiclesByPrice = (vehicles) => {
-  
-
+  return vehicles.sort((a, b) => a.price - b.price);
 };

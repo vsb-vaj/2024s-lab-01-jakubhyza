@@ -1,0 +1,19 @@
+{
+  "name": "2024s-lab-01-jakubhyza",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "You can run any file in your console using command `node task-array.js`",
+  "main": "task-array.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}

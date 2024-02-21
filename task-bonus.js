@@ -8,8 +8,9 @@
 
 // Your code:
 export const drawTriangle = (length = 5) => {
-  
-    // ... write code ...
+  // ... write code ...
+  const lines = Array(length).map((_, i) => console.log("* ".repeat(i + 1)));
+  console.log(lines.join("\n"));
 };
 
 // 2#  ========== BONUS =======================
@@ -29,8 +30,12 @@ export const drawTriangle = (length = 5) => {
 // Your code:
 export const drawJavascriptWord = (word = "javascript") => {
   // ... write code ...
+  for (let i = 0; i < word.length; i++) {
+    const spaces = "*".repeat(word.length - i - 1);
+    const str = spaces + word.substring(i).toUpperCase();
+    console.log(str.split("").join(" "));
+  }
 };
-
 
 // 3#  ========== BONUS =======================
 // Create function that takes array of vehicles with measured top speeds. Return array of vehicle with top speed.
@@ -48,5 +53,11 @@ export const drawJavascriptWord = (word = "javascript") => {
 
 // Your code:
 export const getVehiclesAndTopSpeed = (vehicles) => {
-  
+  // ... write code ...
+  return vehicles
+    .map((vehicle) => ({
+      name: vehicle.name,
+      topSpeed: Math.max(...vehicle.measuredSpeeds),
+    }))
+    .sort((a, b) => b.topSpeed - a.topSpeed);
 };
